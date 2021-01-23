@@ -1,0 +1,77 @@
+.Display {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main_Display {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(214, 214, 214);
+  color: black;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.Display p {
+  display: flex;
+  flex-flow: row;
+  font-size: 16px;
+}
+
+.section {
+  background-color: rgb(187, 187, 187);
+  padding: 10px;
+  min-width: 600px;
+}
+
+#display_name {
+  font-size: 50px;
+}
+
+.display_education > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+#display_school_date {
+  min-width: 140px;
+  margin-right: 20px;
+}
+
+.display_experience > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.divisor {
+  background-color: rgb(161, 161, 161);
+  height: 2px;
+  width: 100%;
+}
+
+.btn_edit {
+  margin-top: 20px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(10, 10, 10);
+  border-radius: 5px;
+  color: white;
+}
+
+.btn_edit:hover {
+  box-shadow: 0 0 0px 3px  rgb(122, 122, 122);
+  
+  
+}

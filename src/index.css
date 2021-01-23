@@ -10,8 +10,16 @@ body {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: rgb(53, 26, 150);
   
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.btn_submit {
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
