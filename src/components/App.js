@@ -40,23 +40,13 @@ class App extends Component {
     this.handleEducationChange = this.handleEducationChange.bind(this);
     this.handleEducationSubmit = this.handleEducationSubmit.bind(this);
     this.handleExperienceChange = this.handleExperienceChange.bind(this);
+    this.handleExperienceSubmit = this.handleExperienceSubmit.bind(this);
   }
-
-  appCallback = (personaldata, educationdata, experiencedata) => {
-    this.setState({
-      Personal: personaldata,
-      Education: educationdata,
-      Experience: experiencedata,
-    });
-  };
 
   handlePersonalChange(id, value) {
     this.setState({
       [id]: value,
     });
-    // console.log("arguments", id, value);
-    // console.log("data", data.Personal[id]);
-    // console.log("state", this.state.Personal.name);
   }
 
   handlePersonalSubmit(personaldata) {
@@ -69,11 +59,6 @@ class App extends Component {
     this.setState({
       [id]: value,
     });
-    console.clear();
-    console.log("state", this.state.name);
-    console.log("arguments", id, value);
-    console.log("data", data.Education[id]);
-    console.log("state", this.state.Education.school);
   }
 
   handleEducationSubmit(educationdata) {
@@ -82,7 +67,13 @@ class App extends Component {
     });
   }
 
-  handleExperienceChange(experiencedata) {
+  handleExperienceChange(id, value) {
+    this.setState({
+      [id]: value,
+    });
+  }
+
+  handleExperienceSubmit(experiencedata) {
     this.setState({
       Experience: experiencedata,
     });
@@ -100,11 +91,7 @@ class App extends Component {
           Personal={Personal}
           Education={Education}
           Experience={Experience}
-          onPersonalChange={this.handlePersonalChange}
-          onEducationChange={this.handlePersonalChange}
-          onExperienceChange={this.handlePersonalChange}
         />
-
         <Form
           Personal={{ name, email, phone }}
           Education={{ school, title, study_date }}
@@ -113,7 +100,8 @@ class App extends Component {
           onPersonalSubmit={this.handlePersonalSubmit}
           onEducationChange={this.handleEducationChange}
           onEducationSubmit={this.handleEducationSubmit}
-          onExperienceChange={this.handlePersonalChange}
+          onExperienceChange={this.handleExperienceChange}
+          onExperienceSubmit={this.handleExperienceSubmit}
         />
       </div>
     );

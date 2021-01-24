@@ -9,69 +9,30 @@ class Display extends Component {
   }
 
   displayEditPersonal = () => {
+    document.querySelector(".dim_screen").classList.remove("hide_dim_screen");
     document.querySelector(".Personal").classList.remove("hide");
+    document.querySelector(".Education").classList.add("hide");
+    document.querySelector(".Experience").classList.add("hide");
   };
 
   displayEditEducation = () => {
+    document.querySelector(".dim_screen").classList.remove("hide_dim_screen");
+    document.querySelector(".Personal").classList.add("hide");
     document.querySelector(".Education").classList.remove("hide");
+    document.querySelector(".Experience").classList.add("hide");
   };
-  // displayData = () => {
-  //   console.log("displaying data");
 
-  //   const { name, email, phone } = this.props.Personal;
-
-  //   return (
-  //     <div className="main_Display">
-  //       <div className="section display_personal">
-  //         <strong id="display_name">{name}</strong>
-  //         <p id="display_email">{email}</p>
-  //         <p id="display_phone">{phone}</p>
-  //         <div className="edit_container">
-  //           <button
-  //             type="button"
-  //             className="btn_edit_Personal btn"
-  //             onClick={this.displayEditPersonal}
-  //           >
-  //             Edit
-  //           </button>
-  //         </div>
-  //       </div>
-  //       <div className="divisor" />
-
-  //       <div className="section display_education">
-  //         <strong>EDUCATION</strong>
-  //         <div>
-  //           <p id="display_school_date">
-  //             {format(new Date(data.Education.study_date), "MMMM dd, yyyy")}
-  //           </p>
-  //           <div>
-  //             <p id="display_school">{data.Education.school}</p>
-  //             <p id="display_title">{data.Education.title}</p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div className="divisor" />
-  //       <div className="section display_experience">
-  //         <strong>EXPERIENCE</strong>
-  //         <p id="display_company">{data.Experience.company}</p>
-  //         <p id="display_job">{data.Experience.job}</p>
-  //         <div>
-  //           <p id="display_company_date_start">
-  //             {format(new Date(data.Experience.job_start), "MMMM dd, yyyy")}
-  //           </p>
-  //           <p>&nbsp;-&nbsp;</p>
-  //           <p id="display_company_date_end">
-  //             {format(new Date(data.Experience.job_end), "MMMM dd, yyyy")}
-  //           </p>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // };
+  displayEditExperience = () => {
+    document.querySelector(".dim_screen").classList.remove("hide_dim_screen");
+    document.querySelector(".Personal").classList.add("hide");
+    document.querySelector(".Education").classList.add("hide");
+    document.querySelector(".Experience").classList.remove("hide");
+  };
 
   render() {
     const { name, email, phone } = this.props.Personal;
     const { school, title, study_date } = this.props.Education;
+    const { company, job, job_start, job_end } = this.props.Experience;
 
     return (
       <div className="Display">
@@ -111,6 +72,28 @@ class Display extends Component {
             </div>
           </div>
           <div className="divisor" />
+          <div className="section display_experience">
+            <strong>EXPERIENCE</strong>
+            <p id="display_company">{company}</p>
+            <p id="display_job">{job}</p>
+            <div className="Experience_info">
+              <p id="display_company_date_start">
+                {format(new Date(job_start), "MMMM dd, yyyy")}
+              </p>
+              <p>&nbsp;-&nbsp;</p>
+              <p id="display_company_date_end">
+                {format(new Date(job_end), "MMMM dd, yyyy")}
+              </p>
+            </div>
+            <div className="edit_container_Experience">
+              <button
+                className="btn_edit_Experience btn"
+                onClick={this.displayEditExperience}
+              >
+                Edit
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );

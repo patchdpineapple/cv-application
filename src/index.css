@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 body {
@@ -11,8 +10,8 @@ body {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgb(184, 184, 184);
-  
+  background-color: hsl(240, 47%, 40%);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,4 +22,32 @@ body {
 
 .hide {
   display: none;
+}
+
+.blueshades {
+  background-color: hsl(240, 33%, 17%);
+  background-color: hsl(240, 37%, 24%);
+  background-color: hsl(240, 42%, 32%);
+  background-color: hsl(240, 47%, 40%);
+  background-color: hsl(240, 54%, 45%);
+  background-color: hsl(240, 65%, 51%);
+  background-color: hsl(240, 82%, 53%);
+  background-color: hsl(240, 75%, 58%);
+  background-color: hsl(240, 64%, 63%);
+  background-color: hsl(240, 45%, 64%);
+  background-color: hsl(240, 26%, 64%);
+  background-color: hsl(240, 8%, 63%);
+  background-color: hsl(240, 1%, 81%);
+}
+
+.whiteshades {
+  background-color: hsl(0, 0%, 7%);
+  background-color: hsl(0, 0%, 17%);
+  background-color: hsl(0, 1%, 27%);
+  background-color: hsl(0, 1%, 39%);
+  background-color: hsl(0, 0%, 51%);
+  background-color: hsl(0, 1%, 65%);
+  background-color: hsl(0, 1%, 77%);
+  background-color: hsl(0, 0%, 91%);
+  background-color: hsl(0, 0%, 100%);
 }

@@ -13,15 +13,14 @@ class Personal extends Component {
     const id = target.id;
     const value = target.value;
 
-    // console.log(target, id, value);
     this.props.onPersonalChange(id, value);
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted Personal");
 
     document.querySelector(".Personal").classList.add("hide");
+    document.querySelector(".dim_screen").classList.add("hide_dim_screen");
 
     const { name, email, phone } = this.props.Personal;
 

@@ -18,9 +18,9 @@ class Education extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted Education");
 
     document.querySelector(".Education").classList.add("hide");
+    document.querySelector(".dim_screen").classList.add("hide_dim_screen");
 
     const { school, title, study_date } = this.props.Education;
 
