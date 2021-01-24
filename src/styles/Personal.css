@@ -1,0 +1,9 @@
+.Personal {
+    color: black;
+    padding: 20px;
+    background-color: rgb(173, 173, 173);
+    z-index: 4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

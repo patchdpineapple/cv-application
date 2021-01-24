@@ -20,15 +20,6 @@
     align-items: center;
     background-color: rgb(173, 173, 173);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.438);
-    position: absolute;
-    top: 50px;
-    z-index: 3;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.hide {
-    display: none;
 }
 
 .input_container {
@@ -39,28 +30,8 @@
    
 }
 
-.btn_submit {
-    
-    border: none;
-    width: 100px;
-    height: 40px;
-    background-color: #3336dd;
-    border-radius: 5px;
-    color: white;
-  }
-  
-.btn_submit:hover {
-    box-shadow: 0 0 0px 3px  rgb(126, 117, 255);
-    
-    
-}
 
 
-.Personal {
-    color: black;
-    padding: 20px;
-    z-index: 3;
-}
 
 .Education{
     color: black;
@@ -92,5 +63,4 @@
 .input_personal, .input_education, .input_experience {
     width: 250px;
     overflow: hidden;
-
 }

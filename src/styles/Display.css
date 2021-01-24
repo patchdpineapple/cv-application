@@ -60,18 +60,30 @@
   width: 100%;
 }
 
-.btn_edit {
+.btn_edit_Personal {
   margin-top: 20px;
   border: none;
   width: 100px;
-  height: 40px;
+  height: 30px;
+  font-size: 12px;
   background-color: rgb(10, 10, 10);
   border-radius: 5px;
   color: white;
 }
 
-.btn_edit:hover {
+.btn:hover {
   box-shadow: 0 0 0px 3px  rgb(122, 122, 122);
-  
-  
+}
+
+.btn_submit {
+  border: none;
+  width: 100px;
+  height: 40px;
+  background-color: #3336dd;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn_submit:hover {
+  box-shadow: 0 0 0px 3px  rgb(126, 117, 255);
 }

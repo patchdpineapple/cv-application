@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import data from "../data";
 import "../styles/Display.css";
 import { format } from "date-fns";
 
@@ -9,36 +8,32 @@ class Display extends Component {
     this.state = {};
   }
 
-  displayEdit = () => {
-    document.querySelector(".dim_screen").classList.remove("hide");
-    // this.props.sendbackData({
-    //   name: data.Personal.name,
-    //   email: data.Personal.email,
-    //   phone: data.Personal.phone,
-    //   school: data.Education.school,
-    //   title: data.Education.title,
-    //   study_date: data.Education.study_date,
-    //   company: data.Experience.company,
-    //   job: data.Experience.job,
-    //   job_start: data.Experience.job_start,
-    //   job_end: data.Experience.job_end,
-    // });
+  displayEditPersonal = () => {
+    document.querySelector(".Personal").classList.remove("hide");
   };
 
   displayData = () => {
     console.log("displaying data");
-    console.log(this.props);
+   
+    const { name, email, phone } = this.props.Personal;
 
-    const { name, email, phone } = this.props;
     return (
       <div className="main_Display">
         <div className="section display_personal">
           <strong id="display_name">{name}</strong>
           <p id="display_email">{email}</p>
           <p id="display_phone">{phone}</p>
+          <button
+            type="button"
+            className="btn_edit_Personal btn"
+            onClick={this.displayEditPersonal}
+          >
+            Edit
+          </button>
         </div>
         <div className="divisor" />
-        <div className="section display_education">
+
+        {/* <div className="section display_education">
           <strong>EDUCATION</strong>
           <div>
             <p id="display_school_date">
@@ -64,19 +59,36 @@ class Display extends Component {
               {format(new Date(data.Experience.job_end), "MMMM dd, yyyy")}
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   };
 
+
+
   render() {
+    
+
+    const { name, email, phone } = this.props.Personal;
     return (
       <div className="Display">
-        {this.displayData()}
-        <button className="btn_edit" type="button" onClick={this.displayEdit}>
-          Edit
-        </button>
+        <div className="main_Display">
+          <div className="section display_personal">
+            <strong id="display_name">{name}</strong>
+            <p id="display_email">{email}</p>
+            <p id="display_phone">{phone}</p>
+            <button
+              className="btn_edit_Personal btn"
+              onClick={this.displayEditPersonal}
+            >
+              Edit
+            </button>
+          </div>
+          <div className="divisor" />
+        </div>
+
       </div>
+      
     );
   }
 }
