@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import data from "../data";
-import '../styles/Personal.css'
-
+import "../styles/Personal.css";
 
 class Personal extends Component {
   constructor(props) {
@@ -16,19 +15,16 @@ class Personal extends Component {
 
     // console.log(target, id, value);
     this.props.onPersonalChange(id, value);
-    
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted Personal");
-  
-    document.querySelector('.Personal').classList.add('hide');
 
-    const {name, email, phone} = this.props.Personal;
+    document.querySelector(".Personal").classList.add("hide");
 
-  
-    
+    const { name, email, phone } = this.props.Personal;
+
     if (name === "" || email === "" || phone === "") {
       return;
     }
@@ -37,16 +33,12 @@ class Personal extends Component {
     data.Personal.email = email;
     data.Personal.phone = phone;
 
-    this.props.onPersonalSubmit({name, email, phone});
-    
-
+    this.props.onPersonalSubmit({ name, email, phone });
+    e.stopPropagation();
   };
 
   render() {
-    console.log('showing personal edit');
-   
-
-    const {name, email, phone} = this.props.Personal;
+    const { name, email, phone } = this.props.Personal;
     return (
       <form className="Personal hide" onSubmit={this.handleSubmit}>
         <div className="form_personal">
@@ -82,7 +74,9 @@ class Personal extends Component {
             />
           </div>
         </div>
-        <button type="submit" className="btn_submit">Submit</button>
+        <button type="submit" className="btn_submit">
+          Submit
+        </button>
       </form>
     );
   }

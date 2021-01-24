@@ -18,7 +18,7 @@ class Experience extends Component {
   }
   render() {
     return (
-      <div className="Experience">
+      <form className="Experience">
         <div className="form_experience">
           <strong>Experience</strong>
           <div>
@@ -47,7 +47,7 @@ class Experience extends Component {
               onChange={this.handleChange}/>
           </div>
         </div>
-      </div>
+      </fodivrm>
     );
   }
 }

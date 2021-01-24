@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "../styles/Form.css";
 import data from "../data";
-import Personal from './Personal';
-
-
+import Personal from "./Personal";
+import Education from "./Education";
 
 class Form extends Component {
   constructor(props) {
@@ -119,19 +118,22 @@ class Form extends Component {
   };
 
   render() {
-    const {name, email, phone} = this.props.Personal;
-    return (
-      
-      <div>
-           <Personal 
-           onPersonalChange={this.props.onPersonalChange}
-           onPersonalSubmit={this.props.onPersonalSubmit}
-           Personal={{name, email, phone}}
-           />
-           {/* <Education onEducationChange={this.handlePersonalChange}/>
-           <Experience onExperienceChange={this.handlePersonalChange}/> */}
-      </div>
+    const { name, email, phone } = this.props.Personal;
+    const { school, title, study_date } = this.props.Education;
 
+    return (
+      <div>
+        <Personal
+          onPersonalChange={this.props.onPersonalChange}
+          onPersonalSubmit={this.props.onPersonalSubmit}
+          Personal={{ name, email, phone }}
+        />
+        <Education
+          onEducationChange={this.props.onEducationChange}
+          onEducationSubmit={this.props.onEducationSubmit}
+          Education={{ school, title, study_date }}
+        />
+      </div>
     );
   }
 }

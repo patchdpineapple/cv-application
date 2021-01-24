@@ -34,7 +34,7 @@
   font-size: 50px;
 }
 
-.display_education > div {
+.Education_info {
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
@@ -60,19 +60,35 @@
   width: 100%;
 }
 
-.btn_edit_Personal {
-  margin-top: 20px;
-  border: none;
-  width: 100px;
-  height: 30px;
-  font-size: 12px;
-  background-color: rgb(10, 10, 10);
-  border-radius: 5px;
-  color: white;
+.edit_container_Personal, .edit_container_Education {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
 }
 
+.btn_edit_Personal, .btn_edit_Education {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: auto;
+  height: 16px;
+  font-size: 12px;
+  background-color: hsla(0, 0%, 45%, 0.712);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  opacity: .8;
+}
+
+
 .btn:hover {
-  box-shadow: 0 0 0px 3px  rgb(122, 122, 122);
+  opacity: 1;
+  background-color: hsl(0, 67%, 57%);
+  border: 1px solid hsl(0, 0%, 95%);
 }
 
 .btn_submit {

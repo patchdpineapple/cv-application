@@ -2,14 +2,18 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  align-items: center;  
+  align-items: flex-start;  
   min-width: 100vw;
   z-index: 1;
+  padding: 20px;
 }
 
 .title {
   padding: 5px;
   color: white;
   text-align: center;
+  background-color: rgb(32, 32, 32);
+  border-radius: 5px;
+  
 
 }
