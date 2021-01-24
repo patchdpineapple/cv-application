@@ -43,6 +43,7 @@ class App extends Component {
     this.handleExperienceSubmit = this.handleExperienceSubmit.bind(this);
   }
 
+//handle and submit function callbacks to be passed to the forms
   handlePersonalChange(id, value) {
     this.setState({
       [id]: value,

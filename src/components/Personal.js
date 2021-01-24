@@ -8,6 +8,7 @@ class Personal extends Component {
     this.state = {};
   }
 
+  //local function for callback of state to parent App.js
   handleChange = (e) => {
     const target = e.target;
     const id = target.id;
@@ -16,6 +17,7 @@ class Personal extends Component {
     this.props.onPersonalChange(id, value);
   };
 
+  //local function for callback and updating data
   handleSubmit = (e) => {
     e.preventDefault();
 

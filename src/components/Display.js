@@ -8,6 +8,7 @@ class Display extends Component {
     this.state = {};
   }
 
+  //functions to display forms below
   displayEditPersonal = () => {
     document.querySelector(".dim_screen").classList.remove("hide_dim_screen");
     document.querySelector(".Personal").classList.remove("hide");
